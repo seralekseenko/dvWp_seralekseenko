@@ -8,4 +8,4 @@ just run :)
 
 ## run in comandline
 
-java -jar app-hello1.jar
+java -jar app.jar
