@@ -6,10 +6,9 @@ services:
     build:
       context: services/app
       dockerfile: Dockerfile.development
-    command: sh -c "java -jar app.jar"
     ports:
       - "4567:4567"
     volumes:
       - "~/.bash_history:/.bash_history"
-      - "./services/app:/usr/src/app:cached"
+      - "./services/app:/code"
       - "/tmp:/tmp:delegated"
