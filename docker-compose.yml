@@ -6,9 +6,9 @@ services:
     build:
       context: services/app
       dockerfile: Dockerfile.development
-      name: "hello"
-      tag: "trololo"
-    command: "bash -c" "java $JAVA_OPTS -jar target/target/app.jar"
+      #name: "hello"
+      #tag: "trololo"
+    command: 'bash -c' 'java $JAVA_OPTS -jar target/target/app.jar'''
     ports:
       - "4567:4567"
     volumes:
