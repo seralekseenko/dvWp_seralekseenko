@@ -16,11 +16,11 @@ $ java -jar app.jar
 
 ### Docker composer run:
 
-docker-compose up -d
+make app
 
 ### Docker composer stop:
 
-docker-compose stop
+make stop
 
 ## Usage
 
