@@ -6,14 +6,12 @@ services:
       context: ./services/app
       target: trololo
       dockerfile: Dockerfile.development
-      #name: "hello"
-      #tag: "trololo"
-    command: ["sh -c", "mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
+    command: ["mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
     ports:
       - "4567:4567"
     volumes:
       - "~/.bash_history:/.bash_history"
-      - "/usr/share/maven:/usr/share/maven"
+      - ".:/usr/share/maven"
       - "~/.m2/repository:/~/.m2/repository"
       - "/services/app/target:/code/target"
       - "/services/app:/code"
