@@ -10,5 +10,7 @@ public class HelloWorld {
         get("/hello", (req, res) -> "###Hello World### count:" + (i.incrementAndGet()) + "\n");
 
         get("/1", (req, res) -> "#Hello World1 count:" + (j.incrementAndGet()) + "\n");
+
+        get("/trololo", (req, res) -> "TROLOLO!" + "\n");
     }
 }
