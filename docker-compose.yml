@@ -11,4 +11,5 @@ services:
     volumes:
       - "~/.bash_history:/.bash_history"
       - "/code/target:/services/app/target"
+      - "/code:/services/app"
       - "/tmp:/tmp:delegated"
