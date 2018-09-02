@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app:
     build:
-      context: ./services/app
+      context: services/app
       #target: trololo
       dockerfile: Dockerfile.development
     #command: ["/mnt/c/Program Files/maven/bin/mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
@@ -11,8 +11,7 @@ services:
       - "4567:4567"
     volumes:
       - "~/.bash_history:/.bash_history"
-      - ".:/usr/share/maven"
       - "~/.m2/repository:/~/.m2/repository"
-      - "/services/app/target:/code/target"
       - "/services/app:/code"
+      - "/services/app/target:/code/target"
       - "/tmp:/tmp:delegated"
