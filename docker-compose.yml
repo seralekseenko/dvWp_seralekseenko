@@ -11,7 +11,6 @@ services:
       - "4567:4567"
     volumes:
       - "~/.bash_history:/.bash_history"
-      - "~/.m2/repository:/~/.m2/repository"
       - "/services/app:/code"
       - "/services/app/target:/code/target"
       - "/tmp:/tmp:delegated"
