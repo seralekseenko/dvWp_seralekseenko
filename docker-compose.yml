@@ -10,6 +10,8 @@ services:
       - "4567:4567"
     volumes:
       - "~/.bash_history:/.bash_history"
+      - "/usr/share/maven:/usr/share/maven"
+      - "~/.m2/repository:~/.m2/repository"
       - "/code/target:/services/app/target"
       - "/code:/services/app"
       - "/tmp:/tmp:delegated"
