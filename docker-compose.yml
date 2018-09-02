@@ -10,10 +10,10 @@ services:
     ports:
       - "4567:4567"
     volumes:
-#      - "/services/app:/code"
-#      - "/services/app/target:/code/target"
+      - "./services/app:/code"
+      - "./services/app/target:/code/target"
       - "~/.bash_history:/.bash_history"
       - "/~/.m2/repository:/~/.m2/repository"
-      - "/code/target:/services/app/target"
-      - "/code:/services/app"
+#      - "/code/target:/services/app/target"
+#      - "/code:/services/app"
       - "/tmp:/tmp:delegated"
