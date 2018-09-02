@@ -6,7 +6,7 @@ services:
       context: ./services/app
       target: trololo
       dockerfile: Dockerfile.development
-    command: ["/mnt/c/Program Files/maven/bin/mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
+    #command: ["/mnt/c/Program Files/maven/bin/mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
     ports:
       - "4567:4567"
     volumes:
