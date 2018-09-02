@@ -16,5 +16,5 @@ ADD src /code/src
 RUN ["mvn", "package"]
 
 EXPOSE 4567
-
+#/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar target/app.jar
 CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "target/app.jar"]
