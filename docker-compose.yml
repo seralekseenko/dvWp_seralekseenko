@@ -9,7 +9,7 @@ services:
     #command: ["/mnt/c/Program Files/maven/bin/mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
     ports:
       - "4567:4567"
-    volumes:
+    #volumes:
 #      - "./services/app:/code"
 #      - "./services/app/target:/code/app/target"
 
