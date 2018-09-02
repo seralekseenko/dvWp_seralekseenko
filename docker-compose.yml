@@ -1,14 +1,14 @@
-version: '3.3'
+version: '3.7'
 
 services:
   app:
-    #image: giantswarm/sparkexample
-    build: .
-      context: services/app
+    build:
+      context: ./services/app
+      target: trololo
       dockerfile: Dockerfile.development
       #name: "hello"
       #tag: "trololo"
-    command: 'bash -c' 'java $JAVA_OPTS -jar target/target/app.jar'''
+    command: ["mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
     ports:
       - "4567:4567"
     volumes:
