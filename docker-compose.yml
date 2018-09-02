@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: ./services/app
-      target: trololo
+      #target: trololo
       dockerfile: Dockerfile.development
     #command: ["/mnt/c/Program Files/maven/bin/mvn clean", "mvn dependency:resolve", "mvn verify", "mvn package", "java -jar app.jar"]
     ports:
